@@ -1,0 +1,40 @@
+
+header
+    padding-top: 20px
+    .container
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+nav
+    ul
+        display: flex
+        li
+            margin-left: 30px
+.burger
+    width:26px
+    height: 20px
+    display: none
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    z-index: 3
+    span
+        width: 26px
+        display: block
+        height: 2px
+        background-color: $burgerSpan 
+        transition: all .2s
+.active-burger
+    position: relative
+    span:nth-child(1) 
+        transform: rotate(45deg) 
+        position: absolute
+        top: 8px
+    span:nth-child(2) 
+        display: none
+    span:nth-child(3) 
+        transform: rotate(-45deg) 
+        position: absolute
+        top:8px
+        

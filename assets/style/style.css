@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul[class], ol[class] {
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: invert;
+}
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 0 35px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+.hiden {
+  overflow: hidden;
+}
+
+.mobile_phone {
+  width: 65px;
+  height: 65px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: green;
+  border-radius: 50%;
+}
+.mobile_phone span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.mobile_phone span img {
+  width: 70%;
+  height: 70%;
+  animation: phone_mobile linear 1.2s forwards infinite;
+}
+
+header {
+  padding-top: 20px;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+}
+nav ul li {
+  margin-left: 30px;
+}
+
+.burger {
+  width: 26px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+.burger span {
+  width: 26px;
+  display: block;
+  height: 2px;
+  background-color: #000000;
+  transition: all 0.2s;
+}
+
+.active-burger {
+  position: relative;
+}
+.active-burger span:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 8px;
+}
+.active-burger span:nth-child(2) {
+  display: none;
+}
+.active-burger span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 8px;
+}
+
+.mobile_phone {
+  display: none;
+}
+
+@keyframes phone_mobile {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+  .mobile_phone {
+    display: block;
+  }
+  nav {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  nav.active {
+    right: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
