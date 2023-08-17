@@ -7,7 +7,6 @@ burger.addEventListener('click',()=>{
 })
 
 // Инициализация слайдера
-const swiper = new Swiper('.swiper', {
-    speed: 400,
-    spaceBetween: 100,
+const swiper = new Swiper('.golovna-slider', {
+    speed: 400, 
   });
