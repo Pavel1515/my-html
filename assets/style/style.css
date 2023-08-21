@@ -49,6 +49,9 @@ main {
 .container {
   width: 100%;
   padding: 0 35px;
+  overflow-x: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -82,8 +85,23 @@ main {
   animation: phone_mobile linear 1.2s forwards infinite;
 }
 
+@font-face {
+  font-family: "Geometria";
+  font-weight: 700;
+  src: url("../font/Geometria-Bold.ttf");
+}
+@font-face {
+  font-family: "Geometria";
+  font-weight: 500;
+  src: url("../font/Geometria-Medium.ttf");
+}
 header {
-  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 2;
 }
 header .container {
   display: flex;
@@ -96,6 +114,30 @@ nav ul {
 }
 nav ul li {
   margin-left: 30px;
+}
+nav ul li a {
+  color: white;
+  display: block;
+  cursor: pointer;
+  font-family: "Geometria";
+  font-size: 22px;
+  padding-bottom: 10px;
+  transition: all 1s;
+}
+nav ul li a:hover {
+  border-bottom: 3px solid #C53720;
+}
+nav ul .button_form {
+  border: 3px solid #C53720;
+  margin-bottom: 0;
+  transition: all 0.5s;
+  padding: 0 10px;
+}
+nav ul .button_form:hover {
+  background-color: #C53720;
+}
+nav ul .button_form a:hover {
+  border: none;
 }
 
 .burger {
@@ -132,6 +174,216 @@ nav ul li {
   top: 8px;
 }
 
+main {
+  width: 100%;
+}
+
+.golovna {
+  position: relative;
+  overflow-x: hidden;
+  height: 720px;
+  width: 100%;
+}
+.golovna .container {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.golovna .container .image_baner {
+  margin-bottom: 150px;
+}
+
+.golovna-slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.golovna-slider .swiper-wrapper {
+  display: flex;
+}
+.golovna-slider .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.golovna-slider .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about {
+  background-image: url("../img/about.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.about .container h2 {
+  text-align: center;
+  font-family: Geometria;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+.about .container p {
+  font-family: Geometria;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.about .container .separator {
+  width: 700px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #C53720;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.about .container .grid {
+  padding-top: 40px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.about .container .grid h3 {
+  text-align: center;
+  font-family: Geometria;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.about .container .grid p {
+  font-size: 18px;
+}
+.about .container .grid .separator {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.avtor {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/avtor.jpg");
+  position: relative;
+  padding-bottom: 40px;
+}
+.avtor .black-fon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.avtor .container {
+  position: relative;
+  z-index: 2;
+}
+.avtor .container h2 {
+  padding-top: 40px;
+  color: #FFF;
+  text-align: center;
+  font-family: Geometria;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+.avtor .container .separator {
+  width: 700px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #C53720;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.avtor .content {
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.avtor .content .text {
+  width: 50%;
+  color: white;
+  font-family: Geometria;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.avtor .content .image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/porsche-normal 1.jpg");
+}
+.contact .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.contact .container h2 {
+  color: #FFF;
+  text-align: center;
+  font-family: Geometria;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  text-shadow: 1px 3px 1px black;
+  padding-bottom: 15px;
+}
+.contact .container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact .container .content p {
+  color: #FFF;
+  display: block;
+  font-family: Geometria;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  position: relative;
+  padding: 20px;
+  border: 3px solid #C53720;
+  width: 700px;
+  z-index: 2;
+}
+.contact .container .content p span {
+  background: rgba(14, 14, 14, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
 .mobile_phone {
   display: none;
 }
